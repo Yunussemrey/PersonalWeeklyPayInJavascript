@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesne yönelimli Programlama</title>
+    <style>
+        body{
+            background-color: bisque;
+            font-style: italic;
+            text-align: center;
+            color: brown;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+
+
+    </style>
+    <script lang="javascript">
+        //nesne yönelimli programlamada saatlik ücretle çalışan personellerin alacakları maaşları veren uyg.
+        function Pers(adSoyad,saatUcret)
+        {
+            this.adSoyad=adSoyad;
+            this.saatUcret=saatUcret;
+            this.ucretOde=ucretOde;
+        }
+        function ucretOde(saat)
+        {
+            return this.saatUcret*saat;
+        }
+        pers1=new Pers(window.prompt("1.Personelin Ad Soyadı "),window.prompt("1. Personelin saatlik ücreti "));
+        pers2=new Pers(window.prompt("2.Personelin Ad Soyadı "),window.prompt("1. Personelin saatlik ücreti "));
+        s1=parseInt(window.prompt("1. Personelin çalışma saati","0"));
+        p1=pers1.ucretOde(s1);
+        s2=parseInt(window.prompt("2. Personelin çalışma saati","0"));
+        p2=pers2.ucretOde(s2);
+        //ilk personel
+        document.writeln("<p>İlk personelin adı soyadı: "+pers1.adSoyad+"</p>");
+        document.writeln("<p>ilk personelin saatlik ücreti: "+pers1.saatUcret+"</p>");
+        document.writeln("<p>ilk personelin çalıştığı saat: "+s1+"</p>");
+        document.writeln("<p>ilk personelin alacağı para: "+p1+"</p>");
+        //ikinci personel
+        document.writeln("<p>------------</p>");
+        document.writeln("<p>ikinci personelin adı soyadı: "+pers2.adSoyad+"</p>");
+        document.writeln("<p>ikinci personelin saatlik ücreti: "+pers2.saatUcret+"</p>");
+        document.writeln("<p>ikinci personelin çalıştığı saat: "+s2+"</p>");
+        document.writeln("<p>ikinci personelin alacağı para: "+p2+"</p>");
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
